@@ -646,7 +646,7 @@ int tty_connect(void)
                     }
 
                     /* Map input character */
-                    if ((input_char == '\n') && (map_i_nl_crnl))
+                    if ((input_char == '\n') && (map_i_nl_crnl | option.auto_carriage_return))
                     {
                         print('\r');
                         print('\n');
